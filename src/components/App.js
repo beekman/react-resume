@@ -9,7 +9,7 @@ export default function App() {
     <main className={styles.App}>
       <Header data={this.state.data}/>
       <Resume data={this.state.data}/>
-      <Footer data={this.state.data}/>
+      <Footer/>
     </main>
   );
 }
