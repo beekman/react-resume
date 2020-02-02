@@ -1,38 +1,34 @@
 import React, { Component } from 'react';
+import EducationList from '../components/Education/EducationList';
 import WorkHistory from '../components/WorkHistory/JobList';
-import Job from '../components/WorkHistory/Job';
+import Contact from '../components/Contact/Contact';
+import Skills from '../components/Skills/Skills';
+const resume = require('../../public/resume.json');
 
 export default class Resume extends Component {
-  state = {
-    workhistory: {job: { title: '', employer: '', startDate: '', endDate: '', description: '' }}
-    }
-  }
+ 
 
   render() {
-    if(this.props.data){
-
-      
-      var work = this.props.data.work.map(function(work){
-        return <div key={work.company}><h3>{work.company}</h3>
-            <p className="info">{work.title}<span>&bull;</span> <em className="date">{work.years}</em></p>
-            <p>{work.description}</p>
-        </div>
-      })
-      var skills = this.props.data.skills.map(function(skills){
-        var className = 'bar-expand '+skills.name.toLowerCase();
-        return <li key={skills.name}><span style={{width:skills.level}}className={className}></span><em>{skills.name}</em></li>
-      })
+    if(this.props.resume){
+      let work = this.props.resume.work.map(function(work){
+        return (<div key={work.company}><h3>{work.company}</h3>
+          <p className="info">{work.title}<span>&bull;</span> <em className="date">{work.years}</em></p>
+          <p>{work.description}</p>
+        </div>);
+      });
+      var skills = this.props.resume.skills.map(function(skills){
+        var className = 'bar-expand ' + skills.name.toLowerCase();
+        return (<li key={skills.name}><span className={className}></span><em>{skills.name}</em></li>);
+      });
     }
 
     return (
       <>
         <Contact />
-        <About />
-        <WorkHistory>
-          <Job />
-        </WorkHistory>
+        <EducationList />
+        <WorkHistory />
+        <Skills />
       </>
     );
   }
-}
 }

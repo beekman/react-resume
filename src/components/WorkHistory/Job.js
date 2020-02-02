@@ -4,8 +4,8 @@ import styles from '../App.css';
 
 const Job = ({ job }) => {
   return (
-    <section className={ styles.Job }>
-      <p className='title'>{ job.title }</p>
+    <section className={ styles.Job } key='Job.title'>
+      <p  className='title'>{ job.title }</p>
       <p className='employer'>{ job.employer }</p>
       <p className='years'>{ job.years }</p>
       <p className='description'>{ job.description }</p>

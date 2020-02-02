@@ -1,5 +1,6 @@
 import React from 'react';
-import styles from './App.css';
+import PropTypes from 'prop-types';
+import styles from '../App.css';
 
 
 const Contact = ({ contact }) => {
@@ -8,22 +9,26 @@ const Contact = ({ contact }) => {
       <h2>Contact Details</h2>
       <p className="address">
         <span>{name}</span><br />
-        <span>{street}<br />
-          {city} {state}, {zip}
+        <span>{contact.street}<br />
+          {contact.city} {contact.state}, {contact.zip}
         </span>
-        <span>{phone}</span><br />
-        <span>{email}</span>
+        <span>{contact.phone}</span><br />
+        <span>{contact.email}</span>
       </p>
     </div>
   );
 };
 
 Contact.propTypes = {
-  
-  social: PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    employer: PropTypes.string.isRequired,
-    years: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired
+  contact: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    street: PropTypes.string.isRequired,
+    city: PropTypes.string.isRequired,
+    state: PropTypes.string.isRequired,
+    zip: PropTypes.string.isRequired,
+    phone: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired
   }).isRequired
 };
+
+export default Contact;
