@@ -5,7 +5,7 @@ export default class Footer extends Component {
     return (
       <footer className={ styles.Footer }>
         <section className={ styles.about }>
-        Developed by Ben Beekman
+          Developed by Ben Beekman
         </section>
       </footer>
     );
