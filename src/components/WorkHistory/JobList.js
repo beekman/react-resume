@@ -11,12 +11,12 @@ const JobList = ({ history }) => {
   });
 
   return (
-    <aside className={ styles.JobList } >
+    <div className={ styles.JobList } >
       <h3>Work History</h3>
       <ul>
         { Jobs }
       </ul>
-    </aside>
+    </div>
   );
 };
 
