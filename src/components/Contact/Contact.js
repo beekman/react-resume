@@ -2,18 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from '../App.css';
 
-
 const Contact = ({ contact }) => {
   return (
-    <div className={styles.Contact}>
+    <div className={ styles.Contact }>
       <h2>Contact Details</h2>
       <p className="address">
-        <span>{name}</span><br />
-        <span>{contact.street}<br />
-          {contact.city} {contact.state}, {contact.zip}
+        <span>{ contact.name }</span><br />
+        <span>{ contact.street }<br />
+          { contact.city } { contact.state }, { contact.zip }
         </span>
-        <span>{contact.phone}</span><br />
-        <span>{contact.email}</span>
+        <span>{ contact.phone }</span><br />
+        <span>{ contact.email }</span>
       </p>
     </div>
   );
@@ -28,7 +27,7 @@ Contact.propTypes = {
     zip: PropTypes.string.isRequired,
     phone: PropTypes.string.isRequired,
     email: PropTypes.string.isRequired
-  }).isRequired
+  })
 };
 
 export default Contact;

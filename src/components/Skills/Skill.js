@@ -1,11 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from '../App.css';
 
 const Skill = ({ skill }) => {
   return (
-    <li className={skill.name}>
-      { skill.name }</li>
+    <span>{ skill.name }</span>
   );
 };
 

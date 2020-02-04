@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import styles from '../App.css';
 import Job from './Job';
 
-const JobList = ({ history }) => {
-  const Jobs = history.map((job, i) => {
+const JobList = ({ workHistory }) => {
+  const Jobs = workHistory.map((job, i) => {
     return <li key={ i }>
       <Job job={ job } />
     </li >;
@@ -21,7 +21,7 @@ const JobList = ({ history }) => {
 };
 
 JobList.propTypes = {
-  history: PropTypes.array.isRequired
+  workHistory: PropTypes.array
 };
 
 export default JobList;

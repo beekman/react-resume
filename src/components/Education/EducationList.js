@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import styles from '../App.css';
 import EducationItem from './EducationItem';
 
-const EducationList = ({ history }) => {
-  const Educations = history.map((education, i) => {
+const EducationList = ({ education }) => {
+  const Educations = education.map((education, i) => {
     return <li key={ i }>
       <EducationItem education={ education } />
     </li >;
@@ -21,7 +21,7 @@ const EducationList = ({ history }) => {
 };
 
 EducationList.propTypes = {
-  history: PropTypes.array.isRequired
+  education: PropTypes.array
 };
 
 export default EducationList;

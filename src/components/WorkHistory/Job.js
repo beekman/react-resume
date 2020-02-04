@@ -19,7 +19,7 @@ Job.propTypes = {
     employer: PropTypes.string.isRequired,
     years: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired
-  }).isRequired
+  })
 };
 
 export default Job;
