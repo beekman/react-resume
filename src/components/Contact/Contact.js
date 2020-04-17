@@ -9,7 +9,7 @@ const Contact = ({ contact }) => {
       <p className="address">
         <span>{ contact.name }</span><br />
         <span>{ contact.street }<br />
-          { contact.city } { contact.state }, { contact.zip }
+          { contact.city }, { contact.state } { contact.zip }
         </span>
         <span>{ contact.phone }</span><br />
         <span>{ contact.email }</span>
